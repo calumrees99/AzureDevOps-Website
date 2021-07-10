@@ -1,0 +1,8 @@
+## Create resource group
+az group create --name BasicWebsite --location uksouth
+
+## Create Web App Service Plan
+az appservice plan create --name FreeWebsite -g BasicWebsite --sku Free
+
+## Create Webapp
+az webapp create --name Website1 -g  BasicWebsite --plan FreeWebsite
